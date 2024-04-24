@@ -1,5 +1,5 @@
 ## Java Project with TestNG and Selenium WebDriver
-This project demonstrates the use of TestNG and Selenium WebDriver for automated web testing.
+This project demonstrates the use of TestNG and Selenium WebDriver for automated web testing for www.saucedemo.com
 
 It uses POM design pattern creating separate classes for each page
 
