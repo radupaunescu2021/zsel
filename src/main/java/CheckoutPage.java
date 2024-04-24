@@ -29,9 +29,7 @@ public class CheckoutPage {
     }
 
     public void cancelCheckout() {
-        WebElement cancelButton = driver.findElement(By.id("cancel"));  // Adjust the ID according to your application
+        WebElement cancelButton = driver.findElement(By.id("cancel"));
         cancelButton.click();
-
-        // Optionally handle any alerts or confirmations that appear when cancelling
     }
 }

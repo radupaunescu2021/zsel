@@ -33,6 +33,7 @@ public class SeleniumTest {
 
     @Test(dataProvider = "loginCredentials")
     public void testLogin(String username, String password) {
+        //Used data provider to test with 5 usernames
         LoginPage loginPage = new LoginPage(driver);
         ProductsPage productsPage = loginPage.loginWithValidUser(username,password);
                 assertTrue(productsPage.isProductsPageLoaded());
@@ -77,8 +78,10 @@ public class SeleniumTest {
     public void testCancelOrderProcess() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginWithValidUser("standard_user", "secret_sauce");
+        // Add an item to the cart
         ProductsPage productsPage = new ProductsPage(driver);
         productsPage.addItemToCart("Sauce Labs Onesie");
+        // Proceed to checkout
         CartPage cartPage = productsPage.goToCart();
         CheckoutPage checkoutPage = cartPage.checkout();
         checkoutPage.fillInDetails("John", "Doe", "90210");
